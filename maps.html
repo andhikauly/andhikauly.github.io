@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html>
-<body>
+  <head>
+    <style type="text/css">
+      html, body { height: 100%; margin: 0; padding: 0; }
+      #map { height: 100%; }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script type="text/javascript">
 
-<h1>My First Google Map</h1>
-
-<div id="map" style="width:100%;height:500px"></div>
-
-<script>
-function myMap() {
-  var mapCanvas = document.getElementById("map");
-  var mapOptions = {
-    center: new google.maps.LatLng(51.508742,-0.120850),
-    zoom: 5
-  };
-var map = new google.maps.Map(mapCanvas, mapOptions);
+var map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: -34.397, lng: 150.644},
+    zoom: 8
+  });
 }
-</script>
 
-<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
-
-</body>
+    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnWexthatRNFMQQL4eEovrRinxqnOYNtI&callback=initMap">
+    </script>
+  </body>
 </html>
